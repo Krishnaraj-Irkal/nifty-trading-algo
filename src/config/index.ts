@@ -14,3 +14,7 @@ export {
   tradingConfig,
   databaseConfig,
 };
+
+export type { DhanConfig } from './dhan.config';
+export type { TradingConfig } from './trading.config';
+export type { DatabaseConfig } from './database.config';

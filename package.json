@@ -8,7 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "test:config": "node --require ts-node/register --require dotenv/config scripts/test-config.ts",
-    "test:db": "tsx scripts/test-mongodb-connection.ts"
+    "test:db": "tsx scripts/test-mongodb-connection.ts",
+    "test:logger": "tsx scripts/test-logger.ts",
+    "test:schemas": "tsx scripts/test-schemas.ts",
+    "test:utils": "tsx scripts/test-utils.ts",
+    "test:errors": "tsx scripts/test-errors.ts"
   },
   "dependencies": {
     "date-fns": "^4.1.0",
@@ -18,7 +22,9 @@
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "technicalindicators": "^3.1.0",
+    "uuid": "^13.0.0",
     "winston": "^3.18.3",
+    "winston-daily-rotate-file": "^5.0.0",
     "ws": "^8.18.3"
   },
   "devDependencies": {
@@ -26,6 +32,8 @@
     "@types/node": "^20.19.24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/uuid": "^10.0.0",
+    "@types/winston": "^2.4.4",
     "@types/ws": "^8.18.1",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",

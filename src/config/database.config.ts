@@ -1,7 +1,10 @@
 // src/config/database.config.ts
 
 import { ConnectOptions } from 'mongoose';
+import dotenv from 'dotenv';
+import path from 'path';
 
+dotenv.config({ path: path.resolve(process.cwd(), '.env.local') });
 /**
  * Database Configuration Types
  */
@@ -42,7 +45,7 @@ interface DatabaseConfig {
  * MongoDB Database Configuration
  */
 const databaseConfig: DatabaseConfig = {
-    uri: process.env.MONGODB_URI || 'mongodb://localhost:27017/nifty-algo-trader',
+    uri: process.env.MONGODB_URI,
     dbName: 'nifty-algo-trader',
 
     options: {
