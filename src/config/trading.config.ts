@@ -178,19 +178,19 @@ interface TradingConfig {
 const tradingConfig: TradingConfig = {
     // Capital Management
     capital: {
-        initial: parseFloat(process.env.PAPER_TRADING_CAPITAL || '10000'),
+        initial: parseFloat(process.env.NEXT_PUBLIC_PAPER_TRADING_CAPITAL || '10000'),
         currency: 'INR',
     },
 
     // Risk Management
     risk: {
-        maxRiskPerTradePercent: parseFloat(process.env.RISK_PER_TRADE_PERCENT || '2'),
-        dailyLossLimitPercent: parseFloat(process.env.DAILY_LOSS_LIMIT_PERCENT || '5'),
+        maxRiskPerTradePercent: parseFloat(process.env.NEXT_PUBLIC_RISK_PER_TRADE_PERCENT || '2'),
+        dailyLossLimitPercent: parseFloat(process.env.NEXT_PUBLIC_DAILY_LOSS_LIMIT_PERCENT || '5'),
         weeklyLossLimitPercent: 10,
         maxDrawdownPercent: 20,
         maxConsecutiveLosses: 2,
-        maxOpenPositions: parseInt(process.env.MAX_POSITIONS || '3'),
-        maxTradesPerDay: parseInt(process.env.MAX_TRADES_PER_DAY || '5'),
+        maxOpenPositions: parseInt(process.env.NEXT_PUBLIC_MAX_POSITIONS || '3'),
+        maxTradesPerDay: parseInt(process.env.NEXT_PUBLIC_MAX_TRADES_PER_DAY || '5'),
         positionSizeAdjustment: {
             highVolatility: 0.5,
             drawdown: 0.5,

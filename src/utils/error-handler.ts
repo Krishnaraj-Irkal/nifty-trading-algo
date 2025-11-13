@@ -1,5 +1,7 @@
 // src/utils/error-handler.ts
 
+import '../config/env';
+
 import { BaseError } from '../errors';
 import { logError } from './logger';
 
@@ -28,7 +30,7 @@ export function formatErrorResponse(error: Error) {
                 name: error.name,
                 message: error.message,
                 statusCode: error.statusCode,
-                ...(process.env.NODE_ENV === 'development' && {
+                ...(process.env.NEXT_PUBLIC_NODE_ENV === 'development' && {
                     stack: error.stack,
                     context: error.context,
                 }),
@@ -43,7 +45,7 @@ export function formatErrorResponse(error: Error) {
             name: 'Error',
             message: error.message || 'An unexpected error occurred',
             statusCode: 500,
-            ...(process.env.NODE_ENV === 'development' && {
+            ...(process.env.NEXT_PUBLIC_NODE_ENV === 'development' && {
                 stack: error.stack,
             }),
         },

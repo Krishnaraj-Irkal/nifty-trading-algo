@@ -5,6 +5,8 @@
  * Import all configs from one place
  */
 
+import './env';
+
 import dhanConfig from './dhan.config';
 import tradingConfig from './trading.config';
 import databaseConfig from './database.config';

@@ -1,9 +1,5 @@
 // scripts/test-schemas.ts
 
-import dotenv from 'dotenv';
-import path from 'path';
-
-dotenv.config({ path: path.resolve(process.cwd(), '.env.local') });
 
 import { initializeDatabase, disconnectDatabase } from '../src/core/database/connection';
 import { logInfo, logError } from '../src/utils/logger';

@@ -12,7 +12,14 @@
     "test:logger": "tsx scripts/test-logger.ts",
     "test:schemas": "tsx scripts/test-schemas.ts",
     "test:utils": "tsx scripts/test-utils.ts",
-    "test:errors": "tsx scripts/test-errors.ts"
+    "test:errors": "tsx scripts/test-errors.ts",
+    "test:websocket": "tsx scripts/test-websocket.ts",
+    "test:health": "tsx scripts/test-health-monitor.ts",
+    "test:subscription": "tsx scripts/test-subscription.ts",
+    "test:parser": "tsx scripts/test-binary-parser.ts",
+    "test:parser-mock": "tsx scripts/test-packet-parsing.ts",
+    "test:ticker": "tsx scripts/test-ticker-parser.ts",
+    "test:ticker-mock": "tsx scripts/test-ticker-mock.ts"
   },
   "dependencies": {
     "date-fns": "^4.1.0",

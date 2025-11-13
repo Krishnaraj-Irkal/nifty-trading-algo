@@ -1,9 +1,12 @@
 // src/utils/logger.ts
 
+import '../config/env';
+
 import winston from 'winston';
 import DailyRotateFile from 'winston-daily-rotate-file';
 import path from 'path';
 import fs from 'fs';
+
 
 /**
  * Professional Logging System
@@ -30,7 +33,7 @@ const LOG_COLORS = {
 winston.addColors(LOG_COLORS);
 
 // Get log level from environment (default: info)
-const LOG_LEVEL = process.env.LOG_LEVEL || 'info';
+const LOG_LEVEL = process.env.NEXT_PUBLIC_LOG_LEVEL || 'info';
 
 // Logs directory
 const LOGS_DIR = path.join(process.cwd(), 'logs');

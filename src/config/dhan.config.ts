@@ -69,14 +69,14 @@ interface DhanConfig {
 // Configuration object
 const dhanConfig: DhanConfig = {
     // API Credentials
-    clientId: process.env.DHAN_CLIENT_ID || '',
-    accessToken: process.env.DHAN_ACCESS_TOKEN || '',
+    clientId: process.env.NEXT_PUBLIC_DHAN_CLIENT_ID || '',
+    accessToken: process.env.NEXT_PUBLIC_DHAN_ACCESS_TOKEN || '',
 
     // WebSocket Configuration
     websocket: {
-        url: process.env.DHAN_WEBSOCKET_URL || 'wss://api-feed.dhan.co',
-        version: process.env.WEBSOCKET_VERSION || '2',
-        authType: process.env.WEBSOCKET_AUTH_TYPE || '2',
+        url: process.env.NEXT_PUBLIC_DHAN_WEBSOCKET_URL || 'wss://api-feed.dhan.co',
+        version: process.env.NEXT_PUBLIC_WEBSOCKET_VERSION || '2',
+        authType: process.env.NEXT_PUBLIC_WEBSOCKET_AUTH_TYPE || '2',
 
         // Connection settings
         maxConnections: 5,

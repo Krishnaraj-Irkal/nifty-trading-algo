@@ -1,10 +1,6 @@
 // scripts/test-mongodb-connection.ts
 
 // Load .env.local first (before any imports)
-import dotenv from 'dotenv';
-import path from 'path';
-
-dotenv.config({ path: path.resolve(process.cwd(), '.env.local') });
 
 // Now import everything else
 import { initializeDatabase, getDatabaseStatus, disconnectDatabase } from '../src/core/database/connection';

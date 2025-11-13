@@ -1,9 +1,5 @@
 // scripts/test-config.ts
 
-import dotenv from 'dotenv';
-import path from 'path';
-
-dotenv.config({ path: path.resolve(process.cwd(), '.env.local') });
 
 import { dhanConfig, tradingConfig, databaseConfig } from '../src/config';
 
